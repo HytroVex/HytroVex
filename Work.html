@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Work | HytroVex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Work.css">
+</head>
+<body>
+
+<header>
+    <a href="Home.html" class="logo-link">
+        <img src="LOGO.png" alt="HytroVex Logo" class="hytrovex-logo">
+    </a>
+
+    <div class="nav-controls">
+        <a href="Home.html" class="home-nav-link">Home</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Service.html">Service</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Featured <span class="gradient">Projects</span></h2>
+    <p>A glimpse into the results we've delivered.</p>
+
+    <div class="screens">
+        <div class="screen">
+            <h3>Project Alpha</h3>
+            <p>E-commerce platform with 40% higher conversion rates.</p>
+        </div>
+        <div class="screen">
+            <h3>Project Beta</h3>
+            <p>AI-powered dashboard for financial data tracking.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 HytroVex. All rights reserved.
+</footer>
+
+<script>
+    // Navigation logic matching your Homepage behavior
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (mobileMenu && navMenu) {
+            mobileMenu.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Close menu when clicking anywhere else
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active')) {
+                if (!navMenu.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
