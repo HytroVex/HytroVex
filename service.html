@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Services | HytroVex</title>
+    <link rel="icon" type="image/png" href="LOGO.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="service.css">
@@ -135,7 +136,7 @@
 
             const btn = document.getElementById('selectPackageBtn');
             btn.style.background = `linear-gradient(45deg, ${pkg.color}, #000)`;
-            btn.onclick = () => window.location.href = `Contact.html?package=${pkgKey}`;
+            btn.onclick = () => window.location.href = `contact.html?package=${pkgKey}`;
 
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
