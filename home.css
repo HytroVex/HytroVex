@@ -174,7 +174,7 @@ nav a:hover {
 /* --- 6. HERO SECTION --- */
 .hero {
     text-align: center;
-    padding: 120px 20px;
+    padding: 45px 20px;
     position: relative;
     z-index: 1;
 }
@@ -182,6 +182,7 @@ nav a:hover {
 .hero-main {
     line-height: 1.1;
     margin-bottom: 20px;
+    margin-top: 0;
 }
 
 .hero-title {
@@ -338,6 +339,9 @@ footer {
 @media (max-width: 768px) {
     header { padding: 12px 25px; }
     nav { right: 25px; width: 190px; }
+    .hero {
+            padding: 20px 20px; /* Reduced from the desktop 60px/120px */
+        }
     .hero-title { font-size: 60px; }
     .hero-subtitle { font-size: 18px; }
     .hero-description { font-size: 16px; margin: 30px auto; }
